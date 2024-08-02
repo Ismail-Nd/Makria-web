@@ -256,3 +256,21 @@ body{
     font-size: 1.2rem;
     font-weight: 800;
 }
+
+
+.not-found{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    a{
+        background: $clr-1;
+        color: white;
+        padding:10px 20px;
+        font-weight: 500;
+        border-radius: 20px;
+    }
+}

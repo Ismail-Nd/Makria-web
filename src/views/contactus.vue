@@ -9,7 +9,11 @@
           enthusiastic entrepreneurs to join us.
         </p>
       </div>
+
       <img src="../assets/Screenshot 2024-08-01 142833 (2).png" alt="" />
+
+      <img src="../assets/img/bg-1.png" alt="" />
+
       <div class="card-cont">
         <div class="card">
           <svg

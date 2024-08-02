@@ -7,10 +7,10 @@
       </div>
     <router-link class="uniq-a" >get started</router-link>
     <div class="footer-links">
-        <router-link >faqs</router-link>
-        <router-link >legal</router-link>
-        <router-link >pricing</router-link>
-        <router-link >contact us</router-link>
+        <router-link to="/faq" >faqs</router-link>
+        <router-link to="/legal" >legal</router-link>
+        <router-link to="/pricing">pricing</router-link>
+        <router-link to="/contact">contact us</router-link>
     </div>
     <hr>
     <p>© 2024 IDEAS INTO REALITY. ALL RIGHTS RESERVED. DESIGNED BY MAKRIA TEAM</p>
@@ -19,7 +19,6 @@
 </template>
 
 <script>
-import emailjs from '@emailjs/browser'
 export default {
 
 }

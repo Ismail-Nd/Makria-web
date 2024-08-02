@@ -9,6 +9,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@aws-amplify/ui-vue": "^4.2.10",
+    "@emailjs/browser": "^4.4.1",
+    "aws-amplify": "^6.4.3",
     "vue": "^3.4.29",
     "vue-router": "^4.3.3"
   },

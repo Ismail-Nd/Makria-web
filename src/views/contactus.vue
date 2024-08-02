@@ -1,6 +1,6 @@
 <template>
   <div>
-    <navbar />
+    <Navbar />
     <div class="content">
       <div class="content-words">
         <h1 class="h1">connect <span> with us </span></h1>
@@ -57,25 +57,68 @@
     </div>
     <div class="contact-us">
       <h1 class="h1">get in touch</h1>
-      <form action="">
+      <p v-if(status) class="status">
+        {{ status }}
+      </p>
+      <form action="" @submit.prevent="mail" >
         <div class="input-cont">
-          <input type="text" placeholder="name">
-          <input type="text" placeholder="email" >
+          <input type="text" placeholder="name" v-model="name" required>
+          <input type="text" placeholder="email" v-model="email" required>
         </div>
-        <textarea placeholder="message"></textarea>
+        <textarea placeholder="message" v-model="message" required ></textarea>
         <button>send message</button>
       </form>
     </div>
+    <Footer/>
   </div>
 </template>
 
 <script>
-import navbar from "../components/navbar.vue";
+import Navbar from "../components/navbar.vue";
+import Footer from"../components/footer.vue"
+import emailjs from "@emailjs/browser"
 export default {
   components: {
-    navbar,
+    Navbar,
+    Footer
   },
+  data(){
+    return{
+      name:'',
+      email:'',
+      message:'',
+      status:''
+    }
+  },
+  methods:{
+    mail() {
+      this.status = 'email sending'
+      emailjs.send(
+        "service_aag5k6l",
+        "template_xeo44ed",
+        {
+          name:this.name,
+          email:this.email,
+          message:this.message
+        },
+        "OviNTByrGC80eVa-Q"
+      )
+      .then(
+        this.status = 'email sent',
+        this.ref
+      )
+    },
+    ref(){
+      this.name = '',
+      this.message = '',
+      this.email = '',
+      setTimeout(() => {
+        this.status = ''
+      }, 3000);
+    }
+  }
 };
 </script>
 
-<style></style>
+<style>
+</style>

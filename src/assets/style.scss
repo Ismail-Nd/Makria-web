@@ -2,7 +2,7 @@ $clr-1: #374cfe;
 $clr-2: #f0fdff;
 $clr-3:#f0f2f2;
 *{
-    font-family: poppins;
+    font-family: sora;
     box-sizing: border-box;
     text-transform: capitalize;
     a{
@@ -15,6 +15,7 @@ $clr-3:#f0f2f2;
 
 body{
     margin: 0;
+    background: $clr-2;
 }
 
 .nav{
@@ -73,8 +74,6 @@ body{
     flex-direction: column;
     gap: 30px;
     padding: 60px;
-    background: $clr-2;
-
     .content-words{
         display: flex;
         align-items: center;
@@ -87,7 +86,7 @@ body{
         }
     }
     .h1{
-        font-size: 5rem;
+        font-size: 4.3rem;
         font-weight: 600;
         span{
             color: $clr-1;
@@ -146,6 +145,7 @@ body{
     padding: 30px;
     flex-direction: column;
     gap: 20px;
+    background: white;
     form{
         display: flex;
         // align-items: center;
@@ -191,4 +191,68 @@ body{
     }
 }
 
+.footer{
+    // border: 1px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    background: $clr-1;
+    width: 100%  ;
+    padding: 80px 80px 20px ;
+    border-radius: 40px 40px 0 0;
+    color: white;
+    hr{
+        width: 100%;
+    }
+    a{
+        color: white;
+    }
+    .footer-words{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 600px;
+        gap: 20px;
+        h1{
+            font-size: 4rem;
+            font-weight: 600;
+            text-align: center;
+            line-height: 70px;
+        }
+    }
+    .uniq-a{
+        background: black;
+        padding: 30px 60px;
+        font-weight: 700;
+        font-size: 1.5rem;
+        border-radius: 20px;
+    }
+    .footer-links{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+        padding: 20px;
+        a{
+            font-size: 1.2rem;
+        }
+    }
+}
 
+.footer-cont{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 30px 0 ;
+}
+
+
+.status{
+    padding:10px  20px;
+    color: green;
+    font-size: 1.2rem;
+    font-weight: 800;
+}

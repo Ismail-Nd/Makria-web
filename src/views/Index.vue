@@ -40,15 +40,14 @@ export default {
     components:{
         Navbar,
         Footer,
-    }
-}
+    },
   components: {
     Navbar,
     Footer,
     Activity,
     ServiceCard
-  },
-};
+  }
+}
 </script>
 
 <style></style>
